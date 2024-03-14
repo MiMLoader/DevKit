@@ -20,7 +20,7 @@ export default async (args: string[]) => {
     zipSpinner.start('Packaging project...');
     fs.ensureDirSync(output);
 
-    await zip.compressDir(__dirname, path.join(output, `${modJson.name}@${modJson.version}.zip`)).catch((e) => {
+    await zip.compressDir(import.meta.dirname, path.join(output, `${modJson.name}@${modJson.version}.zip`)).catch((e) => {
         zipSpinner.stop('Error packaging project.');
         prompts.log.error(`Error building project: zipping. Error: ${e.message}`);
         process.exit(1);
