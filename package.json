@@ -1,0 +1,26 @@
+{
+  "name": "devkit",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/fs-extra": "^11.0.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "bin": {
+    "devkit": "bin/index.js"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun bun src/index.ts --target node --minify --outdir bin/ --format esm"
+  },
+  "type": "module",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "compressing": "^1.10.0",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7"
+  }
+}
