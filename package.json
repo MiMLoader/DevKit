@@ -10,11 +10,11 @@
     "typescript": "^5.0.0"
   },
   "bin": {
-    "devkit": "bin/index.mjs"
+    "devkit": "bin/index.js"
   },
   "scripts": {
     "dev": "bun run src/index.ts",
-    "build": "bun bun src/index.ts --target node --sourcemap --outdir bin/ --format esm"
+    "build": "bun bun src/index.ts --target node --minify --sourcemap --outdir bin/ --format esm"
   },
   "type": "module",
   "dependencies": {
