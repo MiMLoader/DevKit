@@ -62,7 +62,7 @@ export default async (args: string[]) => {
                 },
             })),
             dependencies: await prompts.text({
-                message: 'Description (separated with ", ")',
+                message: 'Dependencies (separated with ", ")',
             }) as string,
             tags: await prompts.text({
                 message: 'Tags (separated with ", ")',
